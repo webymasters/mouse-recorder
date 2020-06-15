@@ -57,9 +57,10 @@ $replayRecording.addEventListener('click', (event) => {
 	record (count);    
 	$replayRecording.style.backgroundColor = "red";
 	}, 50);
+	
 	} else {
 
-	$replayRecording.style.backgroundColor = "yellow";
+	$replayRecording.style.backgroundColor = "green";
 	mouseMoves = [];
 	}
 	}

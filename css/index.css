@@ -4,11 +4,28 @@
 	border-radius: 50%;
 	background-color: black;
 
-	--x: 0;
-	--y: 0;
+	--x: 20;
+	--y: 20;
 	position: fixed;
 	top: calc(var(--y) * 1px);
 	left: calc(var(--x) * 1px);
 
 	/* transition: all 10ms; */
+}
+
+
+body {
+	background-color: antiquewhite;
+}
+
+button {
+	color:white;
+	background-color: green;
+	height: 3em;
+}
+
+.content {
+
+	text-align: center;
+	padding: 2em;
 }
