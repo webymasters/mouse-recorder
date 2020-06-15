@@ -43,5 +43,21 @@ console.log(`STOP!`);
 }
 })
 
+// Replay recording
+$replayRecording.addEventListener('click', (event) => {
 
+	let record = (count) => {
+	if (count < (mouseMoves.length - 1)) {    
+	setTimeout (() => {
+	$cursor.style.setProperty('--x', mouseMoves[count].x)
+	$cursor.style.setProperty('--y', mouseMoves[count].y)
+	count++;
+	record (count);    
+	}, 100);
+	} else {
+	mouseMoves = [];
+	}
+	}
+	record (0);
+	})
 
