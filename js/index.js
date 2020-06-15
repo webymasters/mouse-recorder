@@ -28,7 +28,7 @@ if (isRecording) {
 console.log(event.clientX, event.clientY, event.timeStamp)
 mouseMoves.push({x: event.clientX , y: event.clientY, t: event.timestamp})
 // Record the data to the Array
- // this is one of many ways to prevent recording, consider you may also use removeEventListener() as well
+// this is one of many ways to prevent recording, consider you may also use removeEventListener() as well
 
 }
 })
@@ -37,8 +37,10 @@ mouseMoves.push({x: event.clientX , y: event.clientY, t: event.timestamp})
 // Start/stop the recording
 $startAndStop.addEventListener('click', (event) => {
 if(isRecording = !isRecording) {
+	$startAndStop.style.backgroundColor = "red";
 recordEvent;
 } else {
+	$startAndStop.style.backgroundColor = "green";
 console.log(`STOP!`);
 }
 })
@@ -53,8 +55,11 @@ $replayRecording.addEventListener('click', (event) => {
 	$cursor.style.setProperty('--y', mouseMoves[count].y)
 	count++;
 	record (count);    
-	}, 100);
+	$replayRecording.style.backgroundColor = "red";
+	}, 50);
 	} else {
+
+	$replayRecording.style.backgroundColor = "yellow";
 	mouseMoves = [];
 	}
 	}
